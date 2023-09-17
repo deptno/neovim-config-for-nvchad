@@ -5,7 +5,7 @@ local capabilities = configs.capabilities
 local lspconfig = require("lspconfig")
 local servers = {
   "rust_analyzer",
-  "tsserver"
+  "tsserver",
 }
 
 for _, lsp in ipairs(servers) do
@@ -14,3 +14,6 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+local cfg = require("yaml-companion").setup()
+lspconfig.yamlls.setup(cfg)
