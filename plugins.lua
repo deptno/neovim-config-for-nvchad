@@ -47,5 +47,12 @@ return {
     config = function()
       require("telescope").load_extension("yaml_schema")
     end,
-  }
+  },
+  {
+    "sindrets/diffview.nvim",
+    init = function ()
+      local config = require("custom.configs.diffview")
+      require("diffview").setup(config)
+    end
+  },
 }
