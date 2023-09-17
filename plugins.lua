@@ -22,4 +22,11 @@ return {
       require("custom.configs.vimwiki")
     end,
   },
+  {
+    "mhinz/vim-startify",
+    lazy = false,
+    init = function ()
+      require("custom.configs.vim-startify")
+    end
+  }
 }
