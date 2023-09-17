@@ -28,5 +28,13 @@ return {
     init = function ()
       require("custom.configs.vim-startify")
     end
-  }
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function ()
+      require("nvim-surround").setup({})
+    end
+  },
 }
