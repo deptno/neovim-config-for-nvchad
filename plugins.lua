@@ -9,8 +9,17 @@ return {
   {
     "vimwiki/vimwiki",
     lazy = false,
+    keys = {
+      {"<S-x>", "<Plug>VimwikiToggleListItemj"},
+      {"tt", ":VimwikiTable<CR>"},
+      {";w", ":execute 'VWS /' . expand('<cword>') . '/' <Bar> :lopen<CR>"},
+      {";b", ":execute 'VWB' <Bar> :lopen<CR>"},
+      {";i", "<Plug>VimwikiDiaryGenerateLinks"},
+      {"n", "<Plug>VimwikiDiaryNextDay"},
+      {"N", "<Plug>VimwikiDiaryPrevDay"},
+    },
     init = function()
-      require("custom.configs.vimwiki") 
+      require("custom.configs.vimwiki")
     end,
   },
 }
