@@ -7,6 +7,18 @@ return {
     end,
   },
   {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      local chad = require("plugins.configs.telescope")
+      local custom = require("custom.configs.telescope")
+      local merged = vim.tbl_deep_extend("force", chad, custom)
+
+      print(vim.inspect(merged))
+
+      return merged
+    end,
+  },
+  {
     "vimwiki/vimwiki",
     lazy = false,
     keys = {
