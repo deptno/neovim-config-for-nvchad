@@ -6,6 +6,7 @@ M.disabled = {
     -- nvimtree
     ["<C-n>"] = "",
     ["<leader>e"] = "",
+    -- gitsigns
     ["<leader>rh"] = "",
     ["<leader>ph"] = "",
     ["<leader>gb"] = "",
@@ -14,6 +15,16 @@ M.disabled = {
 }
 
 -- Your custom mappings
+M.general = {
+  n = {
+    ["sw"] = {
+      function()
+        vim.wo.wrap = not vim.wo.wrap
+      end,
+      "Toggle softwrap"
+    },
+  }
+}
 M.nvimtree = {
   n = {
      ["sf"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
