@@ -27,7 +27,12 @@ M.general = {
 }
 M.nvimtree = {
   n = {
-     ["sf"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["sf"] = {
+      function ()
+        require("nvim-tree.api").tree.toggle()
+      end,
+      "Toggle nvimtree"
+    },
   },
 }
 M.gitsigns = {
