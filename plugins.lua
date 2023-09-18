@@ -13,23 +13,12 @@ return {
       local custom = require("custom.configs.telescope")
       local merged = vim.tbl_deep_extend("force", chad, custom)
 
-      print(vim.inspect(merged))
-
       return merged
     end,
   },
   {
     "vimwiki/vimwiki",
     lazy = false,
-    keys = {
-      {"<S-x>", "<Plug>VimwikiToggleListItemj"},
-      {"tt", ":VimwikiTable<CR>"},
-      {";w", ":execute 'VWS /' . expand('<cword>') . '/' <Bar> :lopen<CR>"},
-      {";b", ":execute 'VWB' <Bar> :lopen<CR>"},
-      {";i", "<Plug>VimwikiDiaryGenerateLinks"},
-      {"n", "<Plug>VimwikiDiaryNextDay"},
-      {"N", "<Plug>VimwikiDiaryPrevDay"},
-    },
     init = function()
       require("custom.configs.vimwiki")
     end,
