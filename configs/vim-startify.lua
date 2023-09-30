@@ -2,14 +2,10 @@
 vim.g.startify_bookmarks = {
   '~/.zshrc',
   '~/.tmux.conf',
-  '~/.taskrc',
-  '~/.config/nvim/init.lua',
-  '~/.config/nvim/lua/user/plugins.lua',
+  '~/.config/nvim/lua/custom/init.lua',
   '~/.gitconfig',
-  '~/.gitignore',
-  '~/.gitignore_global',
   '~/.finicky.js',
-  '~/.local/share/nvim/site/pack/packer',
+  '~/.taskrc',
   '~/tmp/rest.http',
 }
 
