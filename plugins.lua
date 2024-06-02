@@ -2,14 +2,14 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("plugins.configs.lspconfig")
+      require("nvchad.configs.lspconfig")
       require("custom.configs.lspconfig")
     end,
   },
   {
     "nvim-telescope/telescope.nvim",
     opts = function()
-      local chad = require("plugins.configs.telescope")
+      local chad = require("nvchad.configs.telescope")
       local custom = require("custom.configs.telescope")
       local merged = vim.tbl_deep_extend("force", chad, custom)
 
